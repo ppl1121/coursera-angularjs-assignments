@@ -70,7 +70,6 @@ function ShoppingListService() {
     var boughtItem = tobuy_items.splice(itemIndex, 1)[0];
     alreadybought_items.push(boughtItem);
     if(tobuy_items.length == 0){
-      console.log("empty");
        message.tobuy_message = "Everything is bought!";
     }
     if(alreadybought_items.length > 0){
