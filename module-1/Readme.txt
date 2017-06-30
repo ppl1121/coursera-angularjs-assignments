@@ -2,9 +2,9 @@ This module-1 assignment is finished by YX.
 
 Others' assignments I reviewed:  
 
-https://adroege.github.io/coursera-assignments/assignment-module2/
+https://hajaramanitra.github.io/coursera-angularjs/module1-solution/
 
-https://serg702.github.io/coursera-test/mod2_solution/
+https://akanshagautam3751.github.io/module1Solution/
 
-https://logistus.github.io/coursera/module2-solution/
+https://rgoregit.github.io/angularjs-assignments/
 
