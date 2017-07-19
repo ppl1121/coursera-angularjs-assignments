@@ -21,7 +21,6 @@ function SignUpBonusController(PreferenceBonusService, myMenuItems, $scope) {
             if(signupCtrl.user.short_name === myMenuItems[i].short_name){
                 PreferenceBonusService.user.menuItem = myMenuItems[i];
                 signupCtrl.notFound = false;
-                $scope.regForm.$invalid = false;
                 return;
             }
           }
