@@ -9,7 +9,7 @@ MainItemsController.$inject = ['$stateParams', 'myitems'];
 function MainItemsController($stateParams, myitems) {
   var mainitems = this;
   mainitems.items = myitems;
-  mainitems.category = $stateParams.categoryShortName;
+  mainitems.category = $stateParams.categoryName;
 }
 
 })();

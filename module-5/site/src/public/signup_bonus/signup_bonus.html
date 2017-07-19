@@ -1,0 +1,67 @@
+<div class="container">
+  <fieldset>
+    <legend>Registration - Bonus Version</legend>
+    <form name='regForm' novalidate>
+
+        <input type="text" name="firstname" placeholder="your firstname"
+          ng-model="signupbonusCtrl.user.firstname"
+          required
+        >
+        <span ng-if="regForm.firstname.$error.required && regForm.firstname.$touched">
+              first name is required!
+        </span>
+        <br>
+
+        <input type="text" name="lastname" placeholder="your lastname"
+          ng-model="signupbonusCtrl.user.lastname"
+          required
+        >
+        <span ng-if="regForm.lastname.$error.required && regForm.lastname.$touched">
+              last name is required!
+        </span>
+        <br>
+
+        <input type="email" name="email" placeholder="Email"
+          ng-model="signupbonusCtrl.user.email"
+          required
+        >
+        <span ng-if="regForm.email.$invalid && regForm.email.$touched">
+            Must be a valid email address: handle@domain format
+        </span>
+        <br>
+
+        <input type="text" name="phone" placeholder="Phone ###-###-####"
+          ng-model="signupbonusCtrl.user.phone"
+          pattern="(\d{3})-(\d{3})-(\d{4})"
+          required
+        >
+        <span ng-if="regForm.phone.$error.required && regForm.phone.$invalid && regForm.phone.$touched">
+            Phone must be in the format ###-###-####.
+        </span>
+        <br>
+
+        <input type="text" name="menu" placeholder="your menu number"
+          ng-model="signupbonusCtrl.user.short_name"
+          ng-blur="signupbonusCtrl.checkItem()"
+          ng-focus="signupbonusCtrl.notFound=false;"
+          required
+        >
+        <span ng-if="regForm.menu.$error.required && regForm.menu.$touched">
+              menu number is required!
+        </span>
+        <span ng-if="signupbonusCtrl.notFound">
+              No such menu number exists!
+        </span>
+        <br>
+
+        <button
+          ng-disabled="regForm.$invalid"
+          ng-click="signupbonusCtrl.submit()">Submit
+        </button>
+    </form>
+
+    <div ng-if="signupbonusCtrl.Found">
+      Your information has been saved!
+    </div>
+  </fieldset>
+</div>
