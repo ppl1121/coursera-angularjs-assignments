@@ -43,14 +43,9 @@ function routeConfig ($stateProvider) {
     })
     .state('public.signup', {
       url: '/signup',
-      templateUrl: 'src/public/signup_bonus/signup_bonus.html',
-      controller: 'SignUpBonusController',
-      controllerAs: 'signupbonusCtrl',
-      resolve: {
-        myMenuItems: ['PreferenceBonusService', function (PreferenceBonusService) {
-          return PreferenceBonusService.getMenuItems();
-        }]
-      }
+      templateUrl: 'src/public/signup/signup.html',
+      controller: 'SignUpController',
+      controllerAs: 'signupCtrl'
     })
     .state('public.myinfo', {
       url: '/myinfo',
